@@ -1,0 +1,17 @@
+.idea/
+out/
+*.iml
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+local.properties
+.settings/
+.loadpath
+.recommenders
+.project
+.DS_Store
+/target
+.classpath
+.project
