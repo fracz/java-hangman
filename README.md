@@ -14,9 +14,10 @@ Gra jest bardzo prosta:
 Zasoby na ten projekt są limitowane. Otrzymane finansowanie pozwala nam poświęcić na ten projekt
 3 godziny pracy dwóch programistów. Zarząd liczy na Wasz sukces! **Opóźnienie nie wchodzi w grę.**
 
-Żeby było łatwiej, otrzymujecie projekt animacji z działu grafików. Nasz lingwista
-opracował listę słów do użycia w grze, a nasz specjalista ds. wizjonerstwa dodatkowo 
-narysował koncepcję oczekiwanego produktu. Prawie wszystko jest więc gotowe. Wystarczy dodać trochę kodu.
+Żeby było łatwiej, otrzymujecie projekt animacji z [działu grafików](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c). 
+Nasz [lingwista](http://generatorslow.pl/) opracował listę słów do użycia w grze, a nasz 
+specjalista ds. wizjonerstwa dodatkowo narysował koncepcję oczekiwanego produktu. 
+Prawie wszystko jest więc gotowe. Wystarczy dodać trochę kodu.
 
 ![Success](https://raw.githubusercontent.com/fracz/java-hangman/master/img/success.gif)
 
