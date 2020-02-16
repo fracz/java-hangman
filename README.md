@@ -31,8 +31,8 @@ Ale na wszelki wypadek:
 1. Jedna osoba z pary forkuje ten projekt.
 2. W ustawieniach repozytorium dodaje drugiej prawa zapisu do projektu (*Settings -> Manage access -> Invite collaborator*).
 3. Obydwie osoby klonują sforkowane repozytorium na komputer, importują do IDE i patrzą co jest w środku.
-4. Razem projektujecie implementacje i ustalacie podział prac.
-5. Pracujecie, wykorzystując wszystko co poznaliście w Javie do tej pory i system kontroli wersji.
+4. Razem projektujecie implementację i ustalacie podział prac.
+5. Pracujecie, wykorzystując wszystko co poznaliście w Javie do tej pory oraz system kontroli wersji.
 
 **Przed ustalonym wyżej deadlinem specjalista ds. koordynacji projektów sprawdzi i oceni postęp prac i jakość implementacji.**
 
