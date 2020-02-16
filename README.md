@@ -4,7 +4,7 @@ Nasz klient potrzebuje grę *Hangman* w języku Java.
 
 Gra jest bardzo prosta:
 
-* losuje słowo i wyświetla "kreskami" ile to słowo ma lister
+* losuje słowo i wyświetla "kreskami" ile to słowo ma liter
 * mogę zgadywać czy dana litera pojawiła się w słowie
 * jeśli trafiłem, gra odkrywa gdzie ta litera pojawia się w słowie (wszystkie wystąpienia)
 * jeśli  nie trafiłem, infografika przedstawiająca status gry przybliża mnie do przegranej
@@ -30,7 +30,7 @@ Ale na wszelki wypadek:
 
 1. Jedna osoba z pary forkuje ten projekt.
 2. W ustawieniach repozytorium dodaje drugiej prawa zapisu do projektu (*Settings -> Manage access -> Invite collaborator*).
-3. Obydwie osoby klonują repozytorium na komputer, importują do IDE i patrzą co jest w środku.
+3. Obydwie osoby klonują sforkowane repozytorium na komputer, importują do IDE i patrzą co jest w środku.
 4. Razem projektujecie implementacje i ustalacie podział prac.
 5. Pracujecie, wykorzystując wszystko co poznaliście w Javie do tej pory i system kontroli wersji.
 
