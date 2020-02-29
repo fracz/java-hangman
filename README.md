@@ -37,17 +37,3 @@ Ale na wszelki wypadek:
 **Przed ustalonym wyżej deadlinem specjalista ds. koordynacji projektów sprawdzi i oceni postęp prac i jakość implementacji.**
 
 Do dzieła!
-
-# Gotowe? Przed czasem?
-
-Takie postawy będą chwalone! 
-
-Ba! NAGRADZANE!
-
-Oto dodatkowe funkcjonalności, z których klient na pewno będzie zadowolony:
-
-* gra powinna pozwalać na wybór długości słowa
-* gra powinna gromadzić statystyki (może da się sprawdzić które słowo jest najtrudniejsze do odgadnięcia?)
-* gra powinna pozwolić na podanie słowa, które ma być zagadką w kolejnej grze 
-  (dzięki temu można uruchomić grę dla kogoś z wymyślonym przez siebie słowem)
-
