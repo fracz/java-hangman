@@ -1,5 +1,7 @@
 package pl.edu.agh.hangman;
 
+import java.util.Scanner;
+
 public class Hangman {
 
     private String word;
@@ -68,7 +70,6 @@ public class Hangman {
         for (String hangPic: HANGMANPICS) {
             System.out.println(hangPic);
         }
-
     }
 
     public void getWord(){
@@ -86,48 +87,46 @@ public class Hangman {
             actualWord[i] = " _ ";
         }
 
-
         for (int i = 0; i < word.length(); i++) {
             wordIntoTable[i] = word.substring(i,i+1);
         }
 
-
     }
 
-    public void getWordTable(){
-
-        for (String letter: wordIntoTable) {
-            System.out.print(letter.toLowerCase());
-        }
-        System.out.println("");
-
-    }
-
-
-    public void showHiddenWord(){
-
-        for (String letter: wordIntoTable) {
-            System.out.print(" _ ");
-        }
-        System.out.println("");
-
-    }
-
-    public void giveLetter(String guessLetter){
-
-        for (int i = 0; i < wordIntoTable.length ; i++) {
-
-            if (guessLetter.equals(wordIntoTable[i])){
-                System.out.print(wordIntoTable[i]);
-            }else{
-                System.out.print(" _ ");
-            }
-        }
+//    public void getWordTable(){
+//
+//        for (String letter: wordIntoTable) {
+//            System.out.print(letter.toLowerCase());
+//        }
+//        System.out.println("");
+//
+//    }
 
 
-        System.out.println("");
+//    public void showHiddenWord(){
+//
+//        for (String letter: wordIntoTable) {
+//            System.out.print(" _ ");
+//        }
+//        System.out.println("");
+//
+//    }
 
-    }
+//    public void giveLetter(String guessLetter){
+//
+//        for (int i = 0; i < wordIntoTable.length ; i++) {
+//
+//            if (guessLetter.equals(wordIntoTable[i])){
+//                System.out.print(wordIntoTable[i]);
+//            }else{
+//                System.out.print(" _ ");
+//            }
+//        }
+//
+//
+//        System.out.println("");
+//
+//    }
 
 
 
@@ -154,6 +153,26 @@ public class Hangman {
             System.out.print(letter.toLowerCase());
         }
         System.out.println("");
+
+    }
+
+
+    public void menu(){
+
+        Scanner scanner = new Scanner(System.in);
+        int wyjscie = 9;
+
+
+        while (wyjscie == 9){
+
+            System.out.println("podaj litere: ");
+            String letter = scanner.nextLine();
+            setActualWord(letter);
+
+        }
+
+
+
 
     }
 
