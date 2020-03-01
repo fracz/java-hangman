@@ -1,3 +1,5 @@
+package pl.edu.agh.hangman;
+
 import java.io.*;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
@@ -11,8 +13,6 @@ public class Word {
         this.maxLength = maxLength;
     }
 
-    public Word() {
-    }
 
     public String getFile(String txtFile) {
 
@@ -54,7 +54,7 @@ public class Word {
 
 //Wywyolanie klasy w main
 //    public static void main(String[] args) {
-//        Word s = new Word(10);
+//        pl.edu.agh.hangman.Word s = new pl.edu.agh.hangman.Word(10);
 //        System.out.println(s.getFile("src/main/resources/slowa.txt"));
 //    }
 
