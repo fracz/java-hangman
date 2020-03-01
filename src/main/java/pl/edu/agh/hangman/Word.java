@@ -49,7 +49,7 @@ public class Word {
 
         int randomIndex = (int) (Math.random() * wordTable.size());
         // System.out.println( "Random word: " +  wordTable.get( randomIndex ) );
-        return wordTable.get(randomIndex);
+        return wordTable.get(randomIndex).toLowerCase();
     }
 
 //Wywyolanie klasy w main
