@@ -6,9 +6,12 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Word {
 
-    public   static ArrayList<String> getFile() {
-                // Reader word = new FileReader("src/main/resources/slowa.txt");
-                String txtFile = "src/main/resources/slowa.txt";
+    public Word() {
+    }
+
+    public   String getFile(String txtFile) {
+
+                //txtFile = "src/main/resources/slowa.txt";
                 BufferedReader br = null;
                 String line = "";
                 ArrayList<String> wordTable = new ArrayList<>();
@@ -41,23 +44,27 @@ public class Word {
 //        for (String s: wordTable){
 //            System.out.println(s);
 //        }
-        return wordTable;
-    }
 
-    public static void main(String[] args) {
-
-        Word tb = new Word();
-        System.out.println(tb.getWord());
-
-      //  for (String s: table) System.out.println(s);
-    }
-
-    public String getWord(){
-        ArrayList<String> wordTable = getFile();
+      //  ArrayList<String> wordTable = getFile();
         Random random = new Random();
 
         int randomIndex = (int) (Math.random() * wordTable.size());
-        System.out.println( "Random Color: " +  wordTable.get( randomIndex ) );
+       // System.out.println( "Random word: " +  wordTable.get( randomIndex ) );
         return wordTable.get( randomIndex);
     }
+
+
+    public static void main(String[] args) {
+        Word s = new Word();
+        System.out.println(s.getFile("src/main/resources/slowa.txt"));
+    }
+
+//    public String getWord(){
+//        ArrayList<String> wordTable = getFile();
+//        Random random = new Random();
+//
+//        int randomIndex = (int) (Math.random() * wordTable.size());
+//        System.out.println( "Random Color: " +  wordTable.get( randomIndex ) );
+//        return wordTable.get( randomIndex);
+//    }
 }
