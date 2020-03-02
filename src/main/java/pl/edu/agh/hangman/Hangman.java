@@ -148,7 +148,7 @@ public class Hangman {
                 actualWord[i] = " _ ";
             }
         }
-        getActualWord();
+        //getActualWord();
 
     }
 
@@ -170,12 +170,16 @@ public class Hangman {
 
             Scanner scanner = new Scanner(System.in);
 
-            showHangmanpics(countTry);
 
-            getActualWord();
+
+
             getWord();
+
+            System.out.print("wybierz opcję: 1 - podaj literę, 2 - zgaduj haslo, 7 - wyjdz" + "  | proba nr.: " + countTry + "/7 |   odgadnij ->   ");
+            getActualWord();
+            showHangmanpics(countTry);
             System.out.println("");
-            System.out.println("wybierz opcję: 1. podaj literę, 2. zgaduj haslo, 7. wyjdz");
+
             int optionNumber = scanner.nextInt(); scanner.nextLine();
 
 
@@ -186,9 +190,16 @@ public class Hangman {
                     System.out.print("podaj litere: ");
                     String letter = scanner.nextLine();
                     setActualWord(letter);
-                    countTry = countTry + 1;
-                    System.out.println(countTry);
 
+                    for (String checkLetter: wordIntoTable) {
+                        if (checkLetter.equals(letter)){
+                            System.out.println("TRAFILES !");
+                            break;
+                        } else {
+                            countTry = countTry + 1;
+                        }
+
+                    }
 
                     break;
 
@@ -197,11 +208,17 @@ public class Hangman {
                     System.out.println("podaj haslo: ");
                     String haslo = scanner.nextLine();
 
+                    if(haslo.equals(word)){
+                        countTry = 7;
+                        System.out.println("WYGRALES !!!!");
+                    }
+
                     break;
 
                 case 7:
+                    countTry =7 ;
 
-                    System.out.println("Dziekujemy za Twoją gre!");
+                    System.out.println("Dziekujemy za Twoją gre! NIE WYGRALES !!!");
 
                     break;
 
@@ -218,8 +235,8 @@ public class Hangman {
 //            countTry = countTry + 1;
 //            System.out.println(countTry);
 
-            getWordTable();
-            getActualWord();
+//            getWordTable();
+//            getActualWord();
 
         }
 
