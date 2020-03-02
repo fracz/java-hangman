@@ -65,11 +65,10 @@ public class Hangman {
                     "========"
     };
 
-    public void showHangmanpics (){
+    public void showHangmanpics (int picNumber){
 
-        for (String hangPic: HANGMANPICS) {
-            System.out.println(hangPic);
-        }
+        System.out.println(HANGMANPICS[picNumber]);
+
     }
 
     public void getWord(){
@@ -84,23 +83,29 @@ public class Hangman {
         this.actualWord = new String[word.length()];
 
         for (int i = 0; i < word.length(); i++) {
-            actualWord[i] = " _ ";
+            wordIntoTable[i] = word.substring(i,i+1);
         }
 
         for (int i = 0; i < word.length(); i++) {
-            wordIntoTable[i] = word.substring(i,i+1);
+
+            if(wordIntoTable[i].equals(" ")){
+                actualWord[i] = " - ";
+            } else {
+                actualWord[i] = " _ ";
+            }
+
         }
 
     }
 
-//    public void getWordTable(){
-//
-//        for (String letter: wordIntoTable) {
-//            System.out.print(letter.toLowerCase());
-//        }
-//        System.out.println("");
-//
-//    }
+    public void getWordTable(){
+
+        for (String letter: wordIntoTable) {
+            System.out.print(letter + " ");
+        }
+        System.out.println("");
+
+    }
 
 
 //    public void showHiddenWord(){
@@ -150,7 +155,7 @@ public class Hangman {
     public void getActualWord(){
 
         for (String letter: actualWord) {
-            System.out.print(letter.toLowerCase());
+            System.out.print(letter);
         }
         System.out.println("");
 
@@ -159,19 +164,64 @@ public class Hangman {
 
     public void menu(){
 
-        Scanner scanner = new Scanner(System.in);
-        int wyjscie = 9;
+        int countTry = 0;
+
+        while (countTry != 7){
+
+            Scanner scanner = new Scanner(System.in);
+
+            showHangmanpics(countTry);
+
+            getActualWord();
+            getWord();
+            System.out.println("");
+            System.out.println("wybierz opcję: 1. podaj literę, 2. zgaduj haslo, 7. wyjdz");
+            int optionNumber = scanner.nextInt(); scanner.nextLine();
 
 
-        while (wyjscie == 9){
+            switch (optionNumber){
 
-            System.out.println("podaj litere: ");
-            String letter = scanner.nextLine();
-            setActualWord(letter);
+                case 1:
+
+                    System.out.print("podaj litere: ");
+                    String letter = scanner.nextLine();
+                    setActualWord(letter);
+                    countTry = countTry + 1;
+                    System.out.println(countTry);
+
+
+                    break;
+
+                case 2:
+
+                    System.out.println("podaj haslo: ");
+                    String haslo = scanner.nextLine();
+
+                    break;
+
+                case 7:
+
+                    System.out.println("Dziekujemy za Twoją gre!");
+
+                    break;
+
+
+
+            }
+
+
+
+
+//            System.out.print("podaj litere: ");
+//            String letter = scanner.nextLine();
+//            setActualWord(letter);
+//            countTry = countTry + 1;
+//            System.out.println(countTry);
+
+            getWordTable();
+            getActualWord();
 
         }
-
-
 
 
     }
