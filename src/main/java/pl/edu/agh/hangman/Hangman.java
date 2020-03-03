@@ -1,5 +1,6 @@
 package pl.edu.agh.hangman;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Hangman {
@@ -65,17 +66,21 @@ public class Hangman {
                     "========"
     };
 
+    public void run (){
+        convertWordIntoTable();
+        menu();
+    }
+
+
+
+
     public void showHangmanpics (int picNumber){
-
         System.out.println(HANGMANPICS[picNumber]);
-
     }
 
     public void getWord(){
         System.out.println(word);
     }
-
-
 
     public void convertWordIntoTable (){
 
@@ -93,9 +98,7 @@ public class Hangman {
             } else {
                 actualWord[i] = " _ ";
             }
-
         }
-
     }
 
     public void getWordTable(){
@@ -106,34 +109,6 @@ public class Hangman {
         System.out.println("");
 
     }
-
-
-//    public void showHiddenWord(){
-//
-//        for (String letter: wordIntoTable) {
-//            System.out.print(" _ ");
-//        }
-//        System.out.println("");
-//
-//    }
-
-//    public void giveLetter(String guessLetter){
-//
-//        for (int i = 0; i < wordIntoTable.length ; i++) {
-//
-//            if (guessLetter.equals(wordIntoTable[i])){
-//                System.out.print(wordIntoTable[i]);
-//            }else{
-//                System.out.print(" _ ");
-//            }
-//        }
-//
-//
-//        System.out.println("");
-//
-//    }
-
-
 
     public void setActualWord (String guessLetter){
 
@@ -148,57 +123,66 @@ public class Hangman {
                 actualWord[i] = " _ ";
             }
         }
-        //getActualWord();
 
     }
 
     public void getActualWord(){
-
         for (String letter: actualWord) {
             System.out.print(letter);
         }
-        System.out.println("");
-
     }
-
 
     public void menu(){
 
         int countTry = 0;
 
-        while (countTry != 7){
-
+        while (countTry != 6){
             Scanner scanner = new Scanner(System.in);
 
-
-
-
-            getWord();
-
-            System.out.print("wybierz opcję: 1 - podaj literę, 2 - zgaduj haslo, 7 - wyjdz" + "  | proba nr.: " + countTry + "/7 |   odgadnij ->   ");
+            System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.print("Proba: " + countTry + "/6               Odgadnij haslo ->   ");
             getActualWord();
-            showHangmanpics(countTry);
             System.out.println("");
+            System.out.println("     ");
+            showHangmanpics(countTry);
+            System.out.println("                         Wybierz opcję: (1) - podaj literę, (2) - zgaduj haslo, (6) - wyjdz");
+            System.out.print("----------------------------------------------------------------------------------------------------------------------------------------");
 
-            int optionNumber = scanner.nextInt(); scanner.nextLine();
+            int optionNumber=0;
 
+            try {
+                optionNumber = scanner.nextInt(); scanner.nextLine();
+
+            } catch (java.util.InputMismatchException e){
+                System.out.println("Podaj jedna z dostepnych w MENU opcji !");
+            }
+
+            if(optionNumber != 1 && optionNumber != 2 && optionNumber != 6){
+                    System.out.println("Nie ma takiej opcji w MENU !");
+            }
 
             switch (optionNumber){
 
                 case 1:
 
-                    System.out.print("podaj litere: ");
+                    System.out.print("Podaj litere: ");
                     String letter = scanner.nextLine();
                     setActualWord(letter);
 
-                    for (String checkLetter: wordIntoTable) {
-                        if (checkLetter.equals(letter)){
-                            System.out.println("TRAFILES !");
-                            break;
-                        } else {
-                            countTry = countTry + 1;
-                        }
+                    if(!checkIfCount(letter)){
+                        countTry = countTry + 1;
+                        System.out.println("NIE TRAFILES !");
+                    }
 
+                    if(countTry == 6){
+                        System.out.print("PRZEGRALES !!!" + " Poprawne haslo to: " );
+                        getWord();
+                        System.out.print("----------------------------------------------------------------------------------------------------------------------------------------");
+                    }
+
+                    if(Arrays.equals(actualWord, wordIntoTable)){
+                        countTry = 6;
+                        System.out.println("WYGRALES !!!!");
                     }
 
                     break;
@@ -209,40 +193,32 @@ public class Hangman {
                     String haslo = scanner.nextLine();
 
                     if(haslo.equals(word)){
-                        countTry = 7;
+                        countTry = 6;
                         System.out.println("WYGRALES !!!!");
+                    } else {
+                        countTry = countTry + 1;
                     }
 
                     break;
 
-                case 7:
-                    countTry =7 ;
+                case 6:
+                    countTry =6 ;
 
-                    System.out.println("Dziekujemy za Twoją gre! NIE WYGRALES !!!");
+                    System.out.println("Dziekujemy za Twoją gre!");
 
                     break;
 
-
-
             }
-
-
-
-
-//            System.out.print("podaj litere: ");
-//            String letter = scanner.nextLine();
-//            setActualWord(letter);
-//            countTry = countTry + 1;
-//            System.out.println(countTry);
-
-//            getWordTable();
-//            getActualWord();
-
         }
-
-
     }
 
+    public boolean checkIfCount(String letter){
 
-
+        for (String checkLetter: wordIntoTable) {
+            if (checkLetter.equals(letter)){
+                return true;
+            }
+        }
+        return false;
+    }
 }
