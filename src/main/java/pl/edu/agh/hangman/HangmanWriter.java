@@ -1,10 +1,15 @@
 package pl.edu.agh.hangman;
-import.java.util.Scanner;
+
+import java.util.Scanner;
 
 
 public class HangmanWriter {
+	public static void main(String args[]) {
 	
-	Scanner Guess = new Guess(System.In);
+	Scanner guess = new guess(System.In);
+	System.out.print("Enter word:")
+	String name = in.nextLine();
+	System.out.println("Your guess is" +)
 
 	// klasa odpowiedzialna za interakcje/kontakt z userem
 }
