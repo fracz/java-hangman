@@ -7,13 +7,13 @@ import static pl.edu.agh.hangman.Hangman.HANGMANPICS;
 public class Drawer {
 
     Scanner scanner = new Scanner(System.in);
-    
+
 
 
     public void drawGameboard(String gameBoard, int lives){
 
         System.out.println(gameBoard);
-        System.out.println(HANGMANPICS.length- lives-1);
+        System.out.println(HANGMANPICS.length- lives);
 
     }
 
