@@ -29,7 +29,7 @@ To już chyba wiesz?
 Ale na wszelki wypadek:
 
 1. Jedna osoba z pary forkuje ten projekt.
-2. W ustawieniach repozytorium dodaje drugiej prawa zapisu do projektu (*Settings -> Collaborators -> Add people*).
+2. W ustawieniach repozytorium dodaje drugiej prawa zapisu do projektu (*Settings -> Collaborators -> Add people*). **Zaproszone osoby muszą zaakceptować zaproszenie!**
 3. Obydwie osoby klonują sforkowane repozytorium na komputer, importują do IDE i patrzą co jest w środku.
 4. Razem projektujecie implementację i ustalacie podział prac.
 5. Pracujecie, wykorzystując wszystko co poznaliście w Javie do tej pory oraz system kontroli wersji.
