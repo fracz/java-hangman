@@ -12,7 +12,7 @@ Gra jest bardzo prosta:
 * jeśli nie uda mi się - przegrywam
 
 Zasoby na ten projekt są limitowane. Otrzymane finansowanie pozwala nam poświęcić na ten projekt
-3 godziny pracy dwóch programistów. Zarząd liczy na Wasz sukces! **Opóźnienie nie wchodzi w grę.**
+3 godziny pracy maksymalnie trojga programistów. Zarząd liczy na Wasz sukces! **Opóźnienie nie wchodzi w grę.**
 
 Żeby było łatwiej, otrzymujecie projekt animacji z działu grafików. Nasz lingwista
 opracował listę słów do użycia w grze, a nasz specjalista ds. wizjonerstwa dodatkowo 
