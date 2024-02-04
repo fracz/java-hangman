@@ -61,7 +61,8 @@ public class Hangman {
     public static void main(String[] args) {
         Guess game = new Guess();
         ChooseWord generateWord = new ChooseWord();
-        ReadTextFromfile fileReader = new ReadTextFromfile();
-        game.guess(generateWord.chooseWord(fileReader.writeWords("/home/students/s/y/syrowy/Desktop/techniki programowania 2/MiniProjekt/java-hangman/src/main/resources/slowa.txt")));
+        ReadTextFromfile fileReader = new ReadTextFromfile("slowa.txt");
+        game.guess(generateWord.chooseWord(fileReader.writeWords()));
+
     }
 }

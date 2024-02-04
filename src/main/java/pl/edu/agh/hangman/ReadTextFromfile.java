@@ -1,17 +1,21 @@
 package pl.edu.agh.hangman;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class ReadTextFromfile {
 
-    public ArrayList<String> writeWords (String path) {
+    private String path;
+
+    public ReadTextFromfile(String path) {
+        this.path = path;
+    }
+
+    public ArrayList<String> writeWords () {
 
         ArrayList<String> words = new ArrayList<>();
         String line;
+        File file = new File(path);
 
         try {
             BufferedReader bf = new BufferedReader(new FileReader(path));
