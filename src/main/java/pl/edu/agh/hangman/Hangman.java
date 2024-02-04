@@ -55,5 +55,7 @@ public class Hangman {
     };
 
     public static void main(String[] args) {
+        WordReader wr = new WordReader();
+        System.out.println(wr.readFile());
     }
 }
