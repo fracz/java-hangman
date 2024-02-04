@@ -2,6 +2,7 @@ package pl.edu.agh.hangman;
 
 import java.util.Scanner;
 
+
 public class Hangman {
 
     public static final String[] HANGMANPICS = new String[]{
@@ -64,6 +65,7 @@ public class Hangman {
 
 
         RandomWord random = new RandomWord();
+
         Logic logic = new Logic(random.getRandomWord());
         String input;
 
@@ -73,11 +75,9 @@ public class Hangman {
             input = scanner.nextLine();
 
 
-
         }while(logic.checkLetter(input.charAt(0)));
 
 
-        PrintResult.printResult(6, "jola");
-
+   
     }
 }
