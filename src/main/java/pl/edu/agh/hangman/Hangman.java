@@ -65,6 +65,7 @@ public class Hangman {
         System.out.println("WITAJ W GRZE WIESIELEC!!!");
         System.out.println("Poniżej wyświetla się zakodowane słowo");
         System.out.println(wordCrypter.cryptWord());
+        HangManPrinter hangManPrinter = new HangManPrinter(HANGMANPICS);
         WordChecker wordChecker = new WordChecker("kretoszczur", wordCrypter.cryptWord());
         while (wordChecker.getHP() > 0 && wordChecker.getNumberOfLettersToGuess() > 0) {
             System.out.println("Podaj literkę: ");
@@ -76,6 +77,7 @@ public class Hangman {
                 wordChecker.checkUserChoice(choosenLetter);
                 System.out.println("Pozostało Ci " + wordChecker.getHP() + " HP");
                 System.out.println("Pozostało Ci " + wordChecker.getNumberOfLettersToGuess() + " słow do odgadnięcia");
+                hangManPrinter.printHangMan(wordChecker.getHP());
                 System.out.println(wordChecker.getWordCrypted());
             }
         }

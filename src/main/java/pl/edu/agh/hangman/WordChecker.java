@@ -11,7 +11,7 @@ public class WordChecker {
     private int numberOfLettersToGuess;
 
     private HashSet<String> usedLetters = new HashSet<>();
-    private int HP = 10;
+    private int HP = 7;
 
     public WordChecker(String wordChoosen, String wordCrypted){
         this.wordChoosen = wordChoosen;
