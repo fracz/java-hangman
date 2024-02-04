@@ -58,5 +58,7 @@ public class Hangman {
     };
 
     public static void main(String[] args) {
+        Guess game = new Guess();
+        game.guess("JAVA");
     }
 }
