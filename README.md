@@ -45,9 +45,8 @@ kod tak, by był [otwarty na rozszerzanie, ale zamknięty na modyfikacje](https:
 prawda?
 
 * gra powinna pozwalać na wybór długości słowa
-* gra powinna pozwolić na podanie słowa, które ma być zagadką w kolejnej grze 
-  (dzięki temu można uruchomić grę dla kogoś z wymyślonym przez siebie słowem)
+* gra powinna pozwalać na zmianę animacji (i możliwej liczby prób wynikającej z niej)
 * gra powinna umieć zapytać o słowo do gry z serwisu 
   [Wordnik](http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5)
   zamiast z podanego pliku
-  
+
