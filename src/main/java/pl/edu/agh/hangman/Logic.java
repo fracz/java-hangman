@@ -1,5 +1,7 @@
 package pl.edu.agh.hangman;
 
+import static pl.edu.agh.hangman.PrintResult.printResult;
+
 public class Logic {
     int level = 0;
     String wordToFind;
@@ -10,7 +12,8 @@ public class Logic {
         currentWord = new StringBuilder().insert(wordToFind.length(), "_");
     }
 
-    public void checkLetter(char letter) {
+    public boolean checkLetter(char letter) {
+        boolean state = true;
         char letterUpper = Character.toUpperCase(letter);
         if (wordToFind.indexOf(letterUpper) < 0) {
             level++;
@@ -23,6 +26,7 @@ public class Logic {
             }
         }
 
-        //printResult(level, currentWord)
+        printResult(level, currentWord.toString());
+        return currentWord.toString().contains("_");
     }
 }
