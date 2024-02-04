@@ -60,6 +60,8 @@ public class Hangman {
 
     public static void main(String[] args) {
         Guess game = new Guess();
-        game.guess("JAVA");
+        ChooseWord generateWord = new ChooseWord();
+        ReadTextFromfile fileReader = new ReadTextFromfile();
+        game.guess(generateWord.chooseWord(fileReader.writeWords("/home/students/h/s/hswiader/Java/java-hangman/src/main/resources/slowa.txt")));
     }
 }
