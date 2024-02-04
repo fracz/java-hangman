@@ -13,7 +13,6 @@ public class Guess {
         Hangman hangman = new Hangman();
         int life = hangman.HANGMANPICS.length;
 
-
         while (lettersToGuess>=0) {
             System.out.println();
             printBoard(emptySpaces);
@@ -41,14 +40,17 @@ public class Guess {
             if (LetterToGuessBefore == LetterToGuessAfter) {
                 life --;
                 lose(life);
+                System.out.println("Zła litera, straciłeś życie. Pozostało Ci " + life + " żyć");
             }
             if (life == 0) {
                 System.out.println("Przegrałeś!");
+                System.out.println("Słowo do odgadnięcia to: " + word);
+                break;
+            } else if (lettersToGuess == 0) {
+                System.out.println("Gratulacje, wygrałeś!");
+                System.out.println("Odgadnięte słowo to: " + word);
                 break;
             }
-        }
-        if (lettersToGuess==0) {
-            System.out.println("Gratulacje, wygrałeś!");
         }
     }
 
@@ -74,8 +76,6 @@ public class Guess {
     public void lose (int life){
         Hangman hangman = new Hangman();
         String[] stage = hangman.HANGMANPICS;
-
         System.out.println(stage[6-life]);
-
     }
 }
