@@ -64,7 +64,9 @@ public class Hangman {
     public static void main(String[] args) {
 
 
-        RandomWord random = new RandomWord();
+        RandomWord random = new RandomWordFromFile();
+
+
 
         Logic logic = new Logic(random.getRandomWord());
         String input;
