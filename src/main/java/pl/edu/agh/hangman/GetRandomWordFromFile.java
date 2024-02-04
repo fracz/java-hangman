@@ -8,7 +8,13 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
 
-public class Word {
+public class GetRandomWordFromFile {
+
+    public String file;
+
+    public GetRandomWordFromFile(String file) {
+        this.file = file;
+    }
 
     private static String cleanWord(String word) {
         String cleanedWord = word.replace("\u00a0","");
@@ -26,8 +32,7 @@ public class Word {
         int randomCounter =  random.ints(0, words.size() - 1).findFirst().getAsInt();
         return words.get(randomCounter);
     }
-    static String getRandomWordFromFile(String file)
-    {
+    public String getWord() {
         File wordsFile = new File(file);
         String line = null;
         int counter = 0;
@@ -49,6 +54,6 @@ public class Word {
             newWord = getRandomWordFromArray(words);
         }
 
-        return newWord;
+        return cleanWord(newWord);
     }
 }
