@@ -47,7 +47,7 @@ public class Guess {
                 break;
             }
         }
-        if (lettersToGuess!=0) {
+        if (lettersToGuess==0) {
             System.out.println("Gratulacje, wygrałeś!");
         }
     }
