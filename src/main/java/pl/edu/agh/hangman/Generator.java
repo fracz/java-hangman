@@ -3,6 +3,7 @@ package pl.edu.agh.hangman;
 public class Generator {
 
 
+
     public void underscoreGenerate(String s) {
         if (!s.isEmpty()) {
             int stringLength = s.length();
@@ -10,6 +11,10 @@ public class Generator {
                 System.out.print("_");
             }
         }
+    }
+
+    public void letterGenerate(String s) {
+        //TODO
     }
 
 }
