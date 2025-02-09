@@ -54,6 +54,9 @@ public class Hangman {
                     "========"
     };
 
+    private static void generateNextPicForConsole(String [] hangmanPics, boolean b){
+
+    }
     public static void main(String[] args) {
     }
 }
