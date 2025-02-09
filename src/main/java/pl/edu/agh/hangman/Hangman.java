@@ -2,6 +2,8 @@ package pl.edu.agh.hangman;
 
 public class Hangman {
 
+
+
     public static final String[] HANGMANPICS = new String[]{
             "  +---+\n" +
                     "  |   |\n" +
@@ -55,5 +57,10 @@ public class Hangman {
     };
 
     public static void main(String[] args) {
+
+        WordReader wordReader = new WordReader();
+        UserInput userInput = new UserInput();
+
+
     }
 }
