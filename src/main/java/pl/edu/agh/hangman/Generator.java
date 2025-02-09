@@ -3,7 +3,6 @@ package pl.edu.agh.hangman;
 public class Generator {
 
 
-
     public void underscoreGenerate(String s) {
         if (!s.isEmpty()) {
             int stringLength = s.length();
@@ -13,8 +12,12 @@ public class Generator {
         }
     }
 
-    public void letterGenerate(String s) {
-        //TODO
+    public String letterGenerate(String s, char character) {
+        if (!s.isEmpty()) {
+            s.replaceAll("_", String.valueOf(character));
+            return s;
+        }
+        throw new RuntimeException("Word must have at least one letter");
     }
 
 }
