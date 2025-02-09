@@ -1,6 +1,7 @@
 package pl.edu.agh.hangman;
 
-public class Hangman {
+//Obsługuje rysowanie wisielca i wyświetlanie aktualnego stanu gry.
+public class HangmanDisplay {
 
     public static final String[] HANGMANPICS = new String[]{
             "  +---+\n" +
@@ -53,7 +54,4 @@ public class Hangman {
                     "      |\n" +
                     "========"
     };
-
-    public static void main(String[] args) {
-    }
 }
