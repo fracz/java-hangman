@@ -61,6 +61,7 @@ public class Hangman {
         WordReader wordReader = new WordReader();
         UserInput userInput = new UserInput();
 
-
+        UserCharacterChecker userCharacterChecker = new UserCharacterChecker(wordReader.returnRandomWord());
+        char[] usersGuesses = userCharacterChecker.getGuessedWordChars();
     }
 }
