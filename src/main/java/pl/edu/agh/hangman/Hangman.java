@@ -61,5 +61,6 @@ public class Hangman {
 
         hangmanUI.Welcome();
         hangmanUI.NextLetter();
+
     }
 }
