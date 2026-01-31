@@ -55,5 +55,10 @@ public class Hangman {
     };
 
     public static void main(String[] args) {
+        new Hangman().Run();
+    }
+
+    private void Run() {
+        new GameLoop();
     }
 }
