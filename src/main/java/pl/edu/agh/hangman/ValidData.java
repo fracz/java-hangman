@@ -26,13 +26,13 @@ public class ValidData {
         return word.contains(String.valueOf(letter));
     }
 
-    public void updateStatus(char letter) {
+    public void updateFounded(char letter) {
 
         boolean foundFlag = checkLetter(letter);
 
         if (foundFlag) {
             for (int i = 0; i < word.length(); i++) {
-                if (word.charAt(2) == letter) {
+                if (word.charAt(i) == letter) {
                     founded[i] = true;
                 }
             }
