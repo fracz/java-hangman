@@ -1,5 +1,7 @@
 package pl.edu.agh.hangman;
 
+import java.util.Scanner;
+
 public class Hangman {
 
     public static final String[] HANGMANPICS = new String[]{
@@ -55,5 +57,10 @@ public class Hangman {
     };
 
     public static void main(String[] args) {
+        HangmanUI hangmanUI = new HangmanUI();
+
+        hangmanUI.Welcome();
+        hangmanUI.NextLetter();
+
     }
 }
