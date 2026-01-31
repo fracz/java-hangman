@@ -1,10 +1,12 @@
 package pl.edu.agh.hangman;
 
 public class ValidData {
-    String word;
+    private String word;
+    private boolean[] founded;
 
     public ValidData(String word) {
         this.word = word;
+        this.founded = new boolean[word.length()];
     }
 
     public String getWord() {
@@ -15,8 +17,25 @@ public class ValidData {
         this.word = word;
     }
 
-    public boolean checkLetter(char letter) {
+    public boolean[] getFounded() {
+        return founded;
+    }
+
+    private boolean checkLetter(char letter) {
 
         return word.contains(String.valueOf(letter));
+    }
+
+    public void updateStatus(char letter) {
+
+        boolean foundFlag = checkLetter(letter);
+
+        if (foundFlag) {
+            for (int i = 0; i < word.length(); i++) {
+                if (word.charAt(2) == letter) {
+                    founded[i] = true;
+                }
+            }
+        }
     }
 }
