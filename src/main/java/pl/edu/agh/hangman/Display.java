@@ -64,7 +64,7 @@ public class Display {
     // Wyswietlenie na podstawie ilosci bledow
     public static void showHangman(int mistakes) {
         if (mistakes < 0 || mistakes >= HANGMANPICS.length) {
-            throw new IllegalArgumentException("Niepopr");
+            throw new IllegalArgumentException("Niepoprawna dlugosc");
         }
         System.out.println(HANGMANPICS[mistakes]);
     }
