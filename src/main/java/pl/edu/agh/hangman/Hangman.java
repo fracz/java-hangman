@@ -55,6 +55,8 @@ public class Hangman {
     };
 
     public static void main(String[] args) {
-        System.out.println(WordRandomizer.getRandomWord());
+        WordRandomizer randomizer = new WordRandomizer();
+        String word = randomizer.getRandomWord();
+        System.out.println("Wylosowane slowo (test): " + word);
     }
 }
