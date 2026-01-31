@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReader {
+
     private String filePath = "/home/students/m/b/mbalicki/Documents/java-hangman/src/main/resources/slowa.txt";
 
     public ArrayList<String> scanFile() throws FileNotFoundException {
