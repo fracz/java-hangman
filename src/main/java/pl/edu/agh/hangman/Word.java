@@ -15,14 +15,12 @@ public class Word {
     public Word(String nazwaPliku) throws IOException {
         slowa = Files.readAllLines(Path.of(nazwaPliku));
 
-        // usuwanie NBSP
         for (int i = 0; i < slowa.size(); i++) {
             slowa.set(i, slowa.get(i)
                     .replace('\u00A0', ' ')
                     .trim());
         }
 
-        // zmiana na UPPER CASE (z PL znakami)
         for (int i = 0; i < slowa.size(); i++) {
             slowa.set(i, slowa.get(i)
                     .toUpperCase(Locale.forLanguageTag("pl")));
