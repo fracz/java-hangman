@@ -17,9 +17,10 @@ public class UserInput {
     }
 
     public char getLetter() {
-        System.out.println("Zgaduj litery, aby odgadnąć hasło.");
-        System.out.println();
-    }
-        System.out.println("Błąd — wpisz jedną literę.");
+        while (true) {
+            System.out.print("Podaj literę: ");
+            String input = scanner.nextLine();
+
+        }
     }
 }
