@@ -17,10 +17,6 @@ public class ValidData {
 
     public boolean checkLetter(char letter) {
 
-        if (word.contains(String.valueOf(letter))) {
-            return true;
-        } else {
-            return false;
-        }
+        return word.contains(String.valueOf(letter));
     }
 }
