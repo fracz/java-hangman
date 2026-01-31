@@ -37,3 +37,16 @@ Ale na wszelki wypadek:
 **Przed ustalonym wyżej deadlinem specjalista ds. koordynacji projektów sprawdzi i oceni postęp prac i jakość implementacji.**
 
 Do dzieła!
+
+# NOWE WYMAGANIA!
+
+Klient oczekuje jeszcze kilku funkcjonalności. Nie powinno to być problemem, bo przecież zaprojektowaliście
+kod tak, by był [otwarty na rozszerzanie, ale zamknięty na modyfikacje](https://pl.wikipedia.org/wiki/Zasada_otwarte-zamkni%C4%99te),
+prawda?
+
+* gra powinna pozwalać na wybór długości słowa
+* gra powinna pozwalać na zmianę animacji (i możliwej liczby prób wynikającej z niej)
+* gra powinna umieć zapytać o słowo do gry z serwisu 
+  [Wordnik](http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5)
+  zamiast z podanego pliku
+
