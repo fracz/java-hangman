@@ -30,8 +30,8 @@ public class WordRandomizer {
         // Najwazniejsza czesc programu
         words = new BufferedReader(new InputStreamReader(inputStream)) // zmiana bajtow na znaki
                 .lines()                                               // czytanie pliku linia po linii
-                .filter(line -> !line.isBlank())                        // usuwa puste linie i spacje
-                .collect(Collectors.toList());                          // zapis do listy
+                .filter(line -> !line.isBlank())                // usuwa puste linie i spacje
+                .collect(Collectors.toList());                        // zapis do listy
 
         if (words.isEmpty()) {
             throw new RuntimeException("wybrany plik jest pusty!");
