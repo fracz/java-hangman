@@ -9,8 +9,10 @@ public class FileReader {
     private String filePath = "/home/students/m/b/mbalicki/Documents/java-hangman/src/main/resources/slowa.txt";
 
     public ArrayList<String> scanFile() throws FileNotFoundException {
+
         ArrayList<String> words = new ArrayList<>();
         File file = new File(filePath);
+
         try (Scanner fileReader = new Scanner(file)) {
             while (fileReader.hasNextLine()) {
                 String word = fileReader.nextLine();
