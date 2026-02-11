@@ -2,7 +2,7 @@ package pl.edu.agh.hangman;
 
 import static pl.edu.agh.hangman.Hangman.HANGMANPICS;
 
-public class PrintHangman {
+public class HangmanPrinter {
 
     // Metoda rysująca hangmana,wybiera odpowiedni rysunek z tablicy
     //mistakes - liczba błędnych odpowiedzi gracza

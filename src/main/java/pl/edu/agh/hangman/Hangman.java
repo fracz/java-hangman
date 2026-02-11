@@ -1,6 +1,6 @@
 package pl.edu.agh.hangman;
 
-import static pl.edu.agh.hangman.PrintHangman.drawHangman;
+import static pl.edu.agh.hangman.HangmanPrinter.drawHangman;
 
 public class Hangman {
 
