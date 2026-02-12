@@ -1,5 +1,7 @@
 package pl.edu.agh.hangman;
 
+import Game.GameLoop;
+
 public class Hangman {
 
     public static final String[] HANGMANPICS = new String[]{
@@ -55,10 +57,7 @@ public class Hangman {
     };
 
     public static void main(String[] args) {
-        new Hangman().Run();
-    }
-
-    private void Run() {
-        new GameLoop();
+        GameRunner runner = new GameRunner();
+        runner.run();
     }
 }

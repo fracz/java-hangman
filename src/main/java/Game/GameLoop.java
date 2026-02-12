@@ -1,8 +1,6 @@
-package pl.edu.agh.hangman;
+package Game;
 
 import java.util.Scanner;
-
-import static jdk.jfr.internal.test.DeprecatedMethods.counter;
 
 public class GameLoop {
 
